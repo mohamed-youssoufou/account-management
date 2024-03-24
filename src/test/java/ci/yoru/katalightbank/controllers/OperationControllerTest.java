@@ -82,7 +82,8 @@ class OperationControllerTest {
                 MockMvcRequestBuilders
                         .post("/api/v1/operations/deposit")
                         .content(request)
-                        .contentType(MediaType.APPLICATION_JSON_VALUE));
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+        );
 
         // then
         perform.andExpect(MockMvcResultMatchers.status().is4xxClientError())

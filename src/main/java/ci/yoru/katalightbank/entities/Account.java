@@ -19,4 +19,9 @@ public class Account implements Serializable {
     private double balance;
     @OneToMany(fetch = FetchType.EAGER)
     private List<Operation> operations;
+
+    @Override
+    public String toString() {
+        return String.format("id: %s | balance :%s", id, balance);
+    }
 }
